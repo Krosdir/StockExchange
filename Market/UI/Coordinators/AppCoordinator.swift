@@ -11,8 +11,12 @@ class AppCoordinator: Coordinator {
     
     let tabBarController = UITabBarController()
     
+    private(set) var catalogCoordinator: CatalogCoordinator!
+    
     required init(root: UINavigationController, parent: Coordinator? = nil) {
         super.init(root: root, parent: parent)
+        
+        catalogCoordinator = CatalogCoordinator(root: UINavigationController(), parent: self)
         
         tabBarController.tabBar.unselectedItemTintColor = .gray
         tabBarController.tabBar.tintColor = .black
@@ -22,7 +26,9 @@ class AppCoordinator: Coordinator {
     }
     
     override func start() {
-        children = []
+        children = [
+            catalogCoordinator
+        ]
         
         children.forEach({ $0.start() })
         

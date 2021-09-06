@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8304AF7826E659FC00D9DAD3 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304AF7626E659FC00D9DAD3 /* CatalogViewController.swift */; };
+		8304AF7926E659FC00D9DAD3 /* CatalogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8304AF7726E659FC00D9DAD3 /* CatalogViewController.xib */; };
+		8304AF7C26E65A2300D9DAD3 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304AF7B26E65A2300D9DAD3 /* CatalogViewModel.swift */; };
+		8304AF7E26E65A7500D9DAD3 /* CatalogCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304AF7D26E65A7500D9DAD3 /* CatalogCoordinator.swift */; };
+		8304AF8126E65AEA00D9DAD3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304AF8026E65AEA00D9DAD3 /* UIViewController.swift */; };
+		8304AF8426E65C0E00D9DAD3 /* InterfaceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304AF8326E65C0E00D9DAD3 /* InterfaceDelegate.swift */; };
+		8304AF8826E65C9000D9DAD3 /* MError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304AF8726E65C9000D9DAD3 /* MError.swift */; };
+		8304AF8A26E65CD000D9DAD3 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304AF8926E65CD000D9DAD3 /* String.swift */; };
 		8313356426E64BFF004979B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313356326E64BFF004979B5 /* AppDelegate.swift */; };
 		8313356626E64BFF004979B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313356526E64BFF004979B5 /* SceneDelegate.swift */; };
 		8313356826E64BFF004979B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313356726E64BFF004979B5 /* ViewController.swift */; };
@@ -18,6 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8304AF7626E659FC00D9DAD3 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		8304AF7726E659FC00D9DAD3 /* CatalogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogViewController.xib; sourceTree = "<group>"; };
+		8304AF7B26E65A2300D9DAD3 /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		8304AF7D26E65A7500D9DAD3 /* CatalogCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCoordinator.swift; sourceTree = "<group>"; };
+		8304AF8026E65AEA00D9DAD3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		8304AF8326E65C0E00D9DAD3 /* InterfaceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceDelegate.swift; sourceTree = "<group>"; };
+		8304AF8726E65C9000D9DAD3 /* MError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MError.swift; sourceTree = "<group>"; };
+		8304AF8926E65CD000D9DAD3 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		8313356026E64BFF004979B5 /* Market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Market.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8313356326E64BFF004979B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8313356526E64BFF004979B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; wrapsLines = 1; };
@@ -41,6 +57,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8304AF7A26E65A0600D9DAD3 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				8304AF7726E659FC00D9DAD3 /* CatalogViewController.xib */,
+				8304AF7626E659FC00D9DAD3 /* CatalogViewController.swift */,
+				8304AF7B26E65A2300D9DAD3 /* CatalogViewModel.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		8304AF7F26E65ADA00D9DAD3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8304AF8026E65AEA00D9DAD3 /* UIViewController.swift */,
+				8304AF8926E65CD000D9DAD3 /* String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8304AF8226E65BFC00D9DAD3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8304AF8326E65C0E00D9DAD3 /* InterfaceDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8304AF8526E65C3600D9DAD3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8304AF8626E65C6200D9DAD3 /* Error */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8304AF8626E65C6200D9DAD3 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8304AF8726E65C9000D9DAD3 /* MError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		8313355726E64BFF004979B5 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +119,9 @@
 		8313356226E64BFF004979B5 /* Market */ = {
 			isa = PBXGroup;
 			children = (
+				8304AF8226E65BFC00D9DAD3 /* Protocols */,
+				8304AF7F26E65ADA00D9DAD3 /* Extensions */,
+				8304AF8526E65C3600D9DAD3 /* Models */,
 				8313357726E64D5D004979B5 /* UI */,
 				8313356326E64BFF004979B5 /* AppDelegate.swift */,
 				8313356526E64BFF004979B5 /* SceneDelegate.swift */,
@@ -87,6 +149,7 @@
 			children = (
 				8313357B26E64D99004979B5 /* Coordinator.swift */,
 				8313357D26E64E26004979B5 /* AppCoordinator.swift */,
+				8304AF7D26E65A7500D9DAD3 /* CatalogCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -94,6 +157,7 @@
 		8313357926E64D73004979B5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8304AF7A26E65A0600D9DAD3 /* Catalog */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -162,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8304AF7926E659FC00D9DAD3 /* CatalogViewController.xib in Resources */,
 				8313357026E64BFF004979B5 /* LaunchScreen.storyboard in Resources */,
 				8313356D26E64BFF004979B5 /* Assets.xcassets in Resources */,
 				8313356B26E64BFF004979B5 /* Main.storyboard in Resources */,
@@ -175,11 +240,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8304AF8826E65C9000D9DAD3 /* MError.swift in Sources */,
+				8304AF7826E659FC00D9DAD3 /* CatalogViewController.swift in Sources */,
 				8313357C26E64D99004979B5 /* Coordinator.swift in Sources */,
+				8304AF8126E65AEA00D9DAD3 /* UIViewController.swift in Sources */,
+				8304AF7E26E65A7500D9DAD3 /* CatalogCoordinator.swift in Sources */,
 				8313356826E64BFF004979B5 /* ViewController.swift in Sources */,
+				8304AF8A26E65CD000D9DAD3 /* String.swift in Sources */,
 				8313357E26E64E26004979B5 /* AppCoordinator.swift in Sources */,
+				8304AF8426E65C0E00D9DAD3 /* InterfaceDelegate.swift in Sources */,
 				8313356426E64BFF004979B5 /* AppDelegate.swift in Sources */,
 				8313356626E64BFF004979B5 /* SceneDelegate.swift in Sources */,
+				8304AF7C26E65A2300D9DAD3 /* CatalogViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
