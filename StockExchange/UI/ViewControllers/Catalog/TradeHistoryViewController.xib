@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TradeHistoryViewController" customModule="StockExchange" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentControl" destination="1r3-IC-1DZ" id="t7d-BY-R7T"/>
+                <outlet property="tableView" destination="La3-pg-big" id="ZxB-fC-wDH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="La3-pg-big">
+                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1r3-IC-1DZ">
+                    <rect key="frame" x="121.5" y="54" width="171" height="32"/>
+                    <segments>
+                        <segment title="BTC/ETH"/>
+                        <segment title="USDC/BTC"/>
+                    </segments>
+                    <color key="tintColor" name="dimYellow"/>
+                    <connections>
+                        <action selector="segmentControlAction:" destination="-1" eventType="valueChanged" id="4gJ-lW-PoQ"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="dark"/>
+            <constraints>
+                <constraint firstItem="1r3-IC-1DZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="6hj-Pc-pRe"/>
+                <constraint firstItem="La3-pg-big" firstAttribute="top" secondItem="1r3-IC-1DZ" secondAttribute="bottom" constant="10" id="Dim-Ft-ynd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="La3-pg-big" secondAttribute="bottom" id="FbF-a7-W5w"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="La3-pg-big" secondAttribute="trailing" id="UWI-7e-KKj"/>
+                <constraint firstItem="1r3-IC-1DZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ycq-Nx-4sk"/>
+                <constraint firstItem="La3-pg-big" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Yp1-mo-Qp0"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="dark">
+            <color red="0.1289999932050705" green="0.125" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="dimYellow">
+            <color red="0.96899998188018799" green="0.80800002813339233" blue="0.27500000596046448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
