@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TradeHistoryViewModelInterfaceDelegate: InterfaceDelegate {
-    
+    func viewModel(_ viewModel: TradeHistoryViewModel, attemptsToReloadSection section: Int)
 }
 
 protocol TradeHistoryViewModelActionDelegate: AnyObject {
@@ -26,13 +26,18 @@ class TradeHistoryViewModel {
     
     private var historyType: TradeHistoryType = .btcEth
     
+    private var sectionViewModels: [TradeTableViewSectionHeaderViewModel] = []
     private var trades: [Trade] = []
     private var buyTrades: [Trade] = []
     private var sellTrades: [Trade] = []
     
+    private var selectedSectionsIndexes: [Int] = []
+    
     var numberOfSections: Int { 2 }
     
-    init() { }
+    init() {
+        getSectionModels()
+    }
     
     func reloadData() {
         getTradeHistory()
@@ -40,11 +45,12 @@ class TradeHistoryViewModel {
     
     func getNumberOfRows(for section: Int) -> Int {
         let trades = section == 0 ? buyTrades : sellTrades
-        return trades.count
+        let isSelected = sectionViewModels[section].isSelected
+        return isSelected ? trades.count : 0
     }
     
-    func headerViewModel(for section: Int) -> TradeTableViewSectionHeaderViewModel? {
-        return TradeTableViewSectionHeaderViewModel(type: section == 0 ? .buy : .sell)
+    func getHeaderViewModel(for section: Int) -> TradeTableViewSectionHeaderViewModel? {
+        return sectionViewModels[section]
     }
     
     func cellViewModel(for indexPath: IndexPath) -> TradeCellViewModel? {
@@ -62,12 +68,28 @@ class TradeHistoryViewModel {
 // MARK: - TradeTableViewSectionHeaderViewModelDelegate
 extension TradeHistoryViewModel: TradeTableViewSectionHeaderViewModelDelegate {
     func viewModelDidSelect(_ viewModel: TradeTableViewSectionHeaderViewModel) {
-        // TODO: section viewModelDidSelect
+        guard let section = sectionViewModels.firstIndex(where: {$0 === viewModel}) else { return }
+        sectionViewModels[section].isSelected.toggle()
+        if !sectionViewModels[section].isSelected,
+           let index = selectedSectionsIndexes.firstIndex(of: section) {
+            selectedSectionsIndexes.remove(at: index)
+        } else {
+            selectedSectionsIndexes.append(section)
+        }
+        interfaceDelegate?.viewModel(self, attemptsToReloadSection: section)
     }
 }
 
 // MARK: - Private request methods
 private extension TradeHistoryViewModel {
+    func getSectionModels() {
+        sectionViewModels.removeAll()
+        for index in 0..<numberOfSections {
+            guard let headerViewModel = headerViewModel(for: index) else { continue }
+            sectionViewModels.append(headerViewModel)
+        }
+    }
+    
     func getTradeHistory() {
         TradeHistoryNetworkService.shared.getTradeHistory(for: historyType) { [weak self] result in
             guard let self = self else { return }
@@ -82,5 +104,12 @@ private extension TradeHistoryViewModel {
                 self.interfaceDelegate?.updateInterface(self)
             }
         }
+    }
+    
+    func headerViewModel(for section: Int) -> TradeTableViewSectionHeaderViewModel? {
+        let type: TradeType = section == 0 ? .buy : .sell
+        let headerViewModel = TradeTableViewSectionHeaderViewModel(type: type)
+        headerViewModel.delegate = self
+        return headerViewModel
     }
 }

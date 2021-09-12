@@ -17,7 +17,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e6-Hf-lfU">
-                            <rect key="frame" x="181.5" y="15" width="51.5" height="24"/>
+                            <rect key="frame" x="181.5" y="14.5" width="51.5" height="25.5"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                             <color key="textColor" name="dimYellow"/>
                             <nil key="highlightedColor"/>
@@ -25,7 +25,7 @@
                     </subviews>
                     <color key="backgroundColor" name="brighterDark"/>
                     <constraints>
-                        <constraint firstItem="2e6-Hf-lfU" firstAttribute="top" secondItem="7M9-o8-uBM" secondAttribute="top" constant="15" id="Gby-qk-lcH"/>
+                        <constraint firstItem="2e6-Hf-lfU" firstAttribute="top" secondItem="7M9-o8-uBM" secondAttribute="top" priority="750" constant="15" id="Gby-qk-lcH"/>
                         <constraint firstItem="2e6-Hf-lfU" firstAttribute="centerY" secondItem="7M9-o8-uBM" secondAttribute="centerY" id="u10-DT-zl7"/>
                         <constraint firstItem="2e6-Hf-lfU" firstAttribute="centerX" secondItem="7M9-o8-uBM" secondAttribute="centerX" id="zLy-GU-fwF"/>
                     </constraints>
@@ -40,13 +40,14 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="sectionLabel" destination="2e6-Hf-lfU" id="fii-Vd-vkM"/>
+                <outlet property="sectionView" destination="7M9-o8-uBM" id="rfL-Mi-vqF"/>
             </connections>
             <point key="canvasLocation" x="134.78260869565219" y="396.42857142857139"/>
         </view>
     </objects>
     <resources>
         <namedColor name="brighterDark">
-            <color red="0.1607843041" green="0.1607843041" blue="0.18823529780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.16099999845027924" green="0.16099999845027924" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="dimYellow">
             <color red="0.96899998188018799" green="0.80800002813339233" blue="0.27500000596046448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
