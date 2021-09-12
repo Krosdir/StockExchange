@@ -104,7 +104,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8304AF7A26E65A0600D9DAD3 /* Catalog */ = {
+		8304AF7A26E65A0600D9DAD3 /* TradeHistory */ = {
 			isa = PBXGroup;
 			children = (
 				8304AF7726E659FC00D9DAD3 /* TradeHistoryViewController.xib */,
@@ -113,7 +113,7 @@
 				839A3FF026ECADF900E46E75 /* Header */,
 				839A3FE326ECA26E00E46E75 /* Cells */,
 			);
-			path = Catalog;
+			path = TradeHistory;
 			sourceTree = "<group>";
 		};
 		8304AF7F26E65ADA00D9DAD3 /* Extensions */ = {
@@ -215,7 +215,7 @@
 		8313357926E64D73004979B5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8304AF7A26E65A0600D9DAD3 /* Catalog */,
+				8304AF7A26E65A0600D9DAD3 /* TradeHistory */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
