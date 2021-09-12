@@ -9,7 +9,7 @@ import UIKit
 
 protocol InterfaceDelegate: AnyObject {
     func updateInterface(_ sender: Any)
-    func didFail(_ sender: Any, with error: MError)
+    func didFail(_ sender: Any, with error: SEError)
 }
 
 extension InterfaceDelegate where Self: UIViewController {
@@ -17,7 +17,7 @@ extension InterfaceDelegate where Self: UIViewController {
 //        hideActivity()
     }
     
-    func didFail(_ sender: Any, with error: MError) {
+    func didFail(_ sender: Any, with error: SEError) {
         updateInterface(sender)
 //        show(error)
     }

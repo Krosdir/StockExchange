@@ -12,10 +12,12 @@ class AppCoordinator: Coordinator {
     let tabBarController = UITabBarController()
     
     private(set) var tradeHistoryCoordinator: TradeHistoryCoordinator!
+    private(set) var currenciesCoordinator: CurrenciesCoordinator!
     
     required init(root: UINavigationController, parent: Coordinator? = nil) {
         super.init(root: root, parent: parent)
         
+        currenciesCoordinator = CurrenciesCoordinator(root: UINavigationController(), parent: self)
         tradeHistoryCoordinator = TradeHistoryCoordinator(root: UINavigationController(), parent: self)
         
         tabBarController.tabBar.unselectedItemTintColor = .gray
@@ -27,6 +29,7 @@ class AppCoordinator: Coordinator {
     
     override func start() {
         children = [
+            currenciesCoordinator,
             tradeHistoryCoordinator
         ]
         

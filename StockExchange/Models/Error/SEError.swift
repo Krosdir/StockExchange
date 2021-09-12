@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol MErrorKey {
+protocol SEErrorKey {
     var rawValue: String { get }
 }
 
-enum MError: LocalizedError, Equatable {
+enum SEError: LocalizedError, Equatable {
     
-    case custom(_ key: MErrorKey)
+    case custom(_ key: SEErrorKey)
     case error(_ error: Error)
     
     private var descriptionKey: String {
@@ -29,12 +29,12 @@ enum MError: LocalizedError, Equatable {
         descriptionKey.localized
     }
     
-    static func == (lhs: MError, rhs: MError) -> Bool {
+    static func == (lhs: SEError, rhs: SEError) -> Bool {
         return lhs.descriptionKey == rhs.descriptionKey
     }
 }
 
-extension MError {
+extension SEError {
     init?(_ code: Int?) {
         switch code {
         case 401:
@@ -46,12 +46,12 @@ extension MError {
         }
     }
     
-    init(_ key: MErrorKey) {
+    init(_ key: SEErrorKey) {
         self = .custom(key)
     }
 }
 
-enum BaseErrorKey: String, MErrorKey {
+enum BaseErrorKey: String, SEErrorKey {
     case authenticationFailed = "error.network.authentication.failed"
     case registrationFailed = "error.network.registration.failed"
     case permissionsDenied = "error.pemissions.denied"
@@ -63,26 +63,34 @@ enum BaseErrorKey: String, MErrorKey {
     case emailInvalid = "error.login.email.invalid"
 }
 
-extension MError {
-    static let authenticationFailed = MError(BaseErrorKey.authenticationFailed)
-    static let registrationFailed = MError(BaseErrorKey.registrationFailed)
-    static let permissionsDenied = MError(BaseErrorKey.permissionsDenied)
+extension SEError {
+    static let authenticationFailed = SEError(BaseErrorKey.authenticationFailed)
+    static let registrationFailed = SEError(BaseErrorKey.registrationFailed)
+    static let permissionsDenied = SEError(BaseErrorKey.permissionsDenied)
 }
 
-extension MError {
-    static let requiredFieldsMissed = MError(BaseErrorKey.requiredFieldsMissed)
+extension SEError {
+    static let requiredFieldsMissed = SEError(BaseErrorKey.requiredFieldsMissed)
 }
 
-extension MError {
-    static let passwordEmpty = MError(BaseErrorKey.passwordEmpty)
-    static let emailEmpty = MError(BaseErrorKey.emailEmpty)
-    static let emailInvalid = MError(BaseErrorKey.emailInvalid)
+extension SEError {
+    static let passwordEmpty = SEError(BaseErrorKey.passwordEmpty)
+    static let emailEmpty = SEError(BaseErrorKey.emailEmpty)
+    static let emailInvalid = SEError(BaseErrorKey.emailInvalid)
 }
 
-enum TradeErrorKey: String, MErrorKey {
+enum TradeErrorKey: String, SEErrorKey {
     case getTradeHistory = "error.network.trade.history.get.failed"
 }
 
-extension MError {
-    static let getTradeHistory = MError(TradeErrorKey.getTradeHistory)
+extension SEError {
+    static let getTradeHistoryFailed = SEError(TradeErrorKey.getTradeHistory)
+}
+
+enum CurrencyErrorKey: String, SEErrorKey {
+    case getCurrenciesFailed = "error.network.currency.get.failed"
+}
+
+extension SEError {
+    static let getCurrenciesFailed = SEError(CurrencyErrorKey.getCurrenciesFailed)
 }
