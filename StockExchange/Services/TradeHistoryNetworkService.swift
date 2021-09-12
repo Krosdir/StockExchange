@@ -12,7 +12,7 @@ final class TradeHistoryNetworkService: NetworkService {
     private override init() {}
     
     func getTradeHistory(for type: TradeHistoryType,
-                         completion: @escaping (Result<[Trade], MError>) -> Void) {
+                         completion: @escaping (Result<[Trade], SEError>) -> Void) {
         let url = URL(string: "?command=returnTradeHistory&currencyPair=\(type.rawValue)",
                       relativeTo: TradeHistoryNetworkService.basePublicURL)!
         
@@ -25,7 +25,7 @@ final class TradeHistoryNetworkService: NetworkService {
             completion(
                 response.result
                     .map { $0.map({ Trade(from: $0) }) }
-                    .mapError { _ in MError(response.response?.statusCode) ?? .getTradeHistory }
+                    .mapError { _ in SEError(response.response?.statusCode) ?? .getTradeHistoryFailed }
             )
         }
     }
