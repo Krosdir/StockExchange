@@ -5,7 +5,6 @@
 //  Created by Danil on 06.09.2021.
 //
 
-import Alamofire
 import UIKit
 
 class TradeHistoryViewController: UIViewController {
@@ -53,7 +52,7 @@ extension TradeHistoryViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension TradeHistoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let headerViewModel = viewModel.headerViewModel(for: section) else { return nil }
+        guard let headerViewModel = viewModel.getHeaderViewModel(for: section) else { return nil }
         let header = tableView.dequeueView(with: TradeTableViewSectionHeader.self)
         header.update(with: headerViewModel)
         return header
@@ -64,6 +63,10 @@ extension TradeHistoryViewController: UITableViewDelegate {
 extension TradeHistoryViewController: TradeHistoryViewModelInterfaceDelegate {
     func updateInterface(_ sender: Any) {
         updateInterface()
+    }
+    
+    func viewModel(_ viewModel: TradeHistoryViewModel, attemptsToReloadSection section: Int) {
+        updateSection(section)
     }
 }
 
@@ -81,6 +84,11 @@ private extension TradeHistoryViewController {
             let type = TradeHistoryType.allCases[index]
             segmentControl.insertSegment(withTitle: type.rawValue, at: index, animated: false)
         }
+        segmentControl.selectedSegmentIndex = 0
+    }
+    
+    func updateSection(_ section: Int) {
+        tableView.reloadSections(IndexSet(integer: section), with: .automatic)
     }
     
     func updateInterface() {
