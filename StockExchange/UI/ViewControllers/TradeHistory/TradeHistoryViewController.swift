@@ -1,6 +1,6 @@
 //
 //  CatalogViewController.swift
-//  Market
+//  StockExchange
 //
 //  Created by Danil on 06.09.2021.
 //
@@ -18,6 +18,11 @@ class TradeHistoryViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         reloadData()
     }
     

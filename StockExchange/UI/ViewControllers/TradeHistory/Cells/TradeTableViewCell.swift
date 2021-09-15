@@ -1,6 +1,6 @@
 //
 //  TableViewCell.swift
-//  Market
+//  StockExchange
 //
 //  Created by Danil on 11.09.2021.
 //
