@@ -1,6 +1,6 @@
 //
 //  MError.swift
-//  Market
+//  StockExchange
 //
 //  Created by Danil on 09.09.2021.
 //

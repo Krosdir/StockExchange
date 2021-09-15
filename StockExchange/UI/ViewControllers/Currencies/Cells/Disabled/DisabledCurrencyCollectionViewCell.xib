@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="wSi-cL-dfu" customClass="DisabledCurrencyCollectionViewCell" customModule="StockExchange" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nLa-T6-h5E">
+                <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A2A-Tg-cKN">
+                        <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRZ-H6-HJa">
+                                <rect key="frame" x="12.5" y="24" width="42" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="dimYellow"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="brighterDark"/>
+                        <constraints>
+                            <constraint firstItem="wRZ-H6-HJa" firstAttribute="centerY" secondItem="A2A-Tg-cKN" secondAttribute="centerY" id="4xv-zU-hBd"/>
+                            <constraint firstItem="wRZ-H6-HJa" firstAttribute="centerX" secondItem="A2A-Tg-cKN" secondAttribute="centerX" id="DJU-vx-i8f"/>
+                            <constraint firstAttribute="width" secondItem="A2A-Tg-cKN" secondAttribute="height" id="DtU-h8-fSq"/>
+                            <constraint firstItem="wRZ-H6-HJa" firstAttribute="leading" secondItem="A2A-Tg-cKN" secondAttribute="leading" constant="12.5" id="ms1-yP-QBq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="A2A-Tg-cKN" firstAttribute="leading" secondItem="nLa-T6-h5E" secondAttribute="leading" id="OOZ-1E-ch8"/>
+                    <constraint firstItem="A2A-Tg-cKN" firstAttribute="centerY" secondItem="nLa-T6-h5E" secondAttribute="centerY" id="PoN-Un-ZwU"/>
+                    <constraint firstItem="A2A-Tg-cKN" firstAttribute="top" secondItem="nLa-T6-h5E" secondAttribute="top" id="fX1-a7-KIC"/>
+                    <constraint firstItem="A2A-Tg-cKN" firstAttribute="centerX" secondItem="nLa-T6-h5E" secondAttribute="centerX" id="oB4-MX-4Er"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="67" height="67"/>
+            <connections>
+                <outlet property="cellView" destination="A2A-Tg-cKN" id="tcQ-ud-mqm"/>
+                <outlet property="nameLabel" destination="wRZ-H6-HJa" id="k6Z-IJ-55x"/>
+            </connections>
+            <point key="canvasLocation" x="-434.05797101449281" y="189.17410714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="brighterDark">
+            <color red="0.16099999845027924" green="0.16099999845027924" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="dimYellow">
+            <color red="0.96899998188018799" green="0.80800002813339233" blue="0.27500000596046448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Currency {
+struct Currency: Hashable {
     let id: Int
     let name: String
     let txFee: Double
@@ -16,6 +16,8 @@ struct Currency {
     let disabled: Bool
     let delisted: Bool
     let frozen: Bool
+    
+    private let identifier = UUID()
     
     init(from currencyData: CurrencyData) {
         self.id = currencyData.id
@@ -26,5 +28,13 @@ struct Currency {
         self.disabled = Bool(truncating: currencyData.disabled as NSNumber)
         self.delisted = Bool(truncating: currencyData.delisted as NSNumber)
         self.frozen = Bool(truncating: currencyData.frozen as NSNumber)
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(identifier)
+    }
+    
+    static func == (lhs: Currency, rhs: Currency) -> Bool {
+        return lhs.identifier == rhs.identifier
     }
 }

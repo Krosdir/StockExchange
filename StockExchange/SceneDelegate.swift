@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Market
+//  StockExchange
 //
 //  Created by Данил on 06.09.2021.
 //

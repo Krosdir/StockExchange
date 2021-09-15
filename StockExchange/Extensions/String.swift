@@ -1,6 +1,6 @@
 //
 //  String.swift
-//  Market
+//  StockExchange
 //
 //  Created by Danil on 06.09.2021.
 //
