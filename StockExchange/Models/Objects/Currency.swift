@@ -17,8 +17,6 @@ struct Currency: Hashable {
     let delisted: Bool
     let frozen: Bool
     
-    private let identifier = UUID()
-    
     init(from currencyData: CurrencyData) {
         self.id = currencyData.id
         self.name = currencyData.name
@@ -31,10 +29,10 @@ struct Currency: Hashable {
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(identifier)
+        hasher.combine(id)
     }
     
     static func == (lhs: Currency, rhs: Currency) -> Bool {
-        return lhs.identifier == rhs.identifier
+        return lhs.id == rhs.id
     }
 }

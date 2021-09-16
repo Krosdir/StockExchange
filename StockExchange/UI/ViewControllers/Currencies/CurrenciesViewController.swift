@@ -11,7 +11,6 @@ class CurrenciesViewController: UIViewController {
 
     var dataSource: UICollectionViewDiffableDataSource<Section, Currency>! = nil
     var collectionView: UICollectionView! = nil
-    var refreshControl: UIRefreshControl!
     
     var viewModel: CurrenciesViewModel!
     
