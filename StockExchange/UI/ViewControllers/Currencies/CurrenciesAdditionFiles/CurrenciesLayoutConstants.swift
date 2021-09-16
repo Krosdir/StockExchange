@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct CurrenciesLayoutConstants {
+enum CurrenciesLayoutConstants {
     static let headerHeight = NSCollectionLayoutDimension.estimated(40)
     static let spacing: CGFloat = 10
     

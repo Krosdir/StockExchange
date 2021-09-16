@@ -38,16 +38,23 @@ class FrozenCurrencyCollectionViewCell: UICollectionViewCell, UpdateableCell {
 
 // MARK: - Private
 private extension FrozenCurrencyCollectionViewCell {
+    enum FrozenConstants {
+        static let cornerRadius: CGFloat = 5
+        static let shadowRadius: CGFloat = 4
+        static let shadowOpacity: Float = 0.7
+        static let shadowOffset = CGSize(width: 0, height: 2)
+    }
+    
     func setupViews() {
         DispatchQueue.main.async { [self] in
-            let cornerRadius: CGFloat = 5
-            cellView.layer.cornerRadius = cornerRadius
+            cellView.layer.cornerRadius = FrozenConstants.cornerRadius
 
+            cellView.layer.shadowOffset = FrozenConstants.shadowOffset
+            cellView.layer.shadowRadius = FrozenConstants.shadowRadius
+            cellView.layer.shadowOpacity = FrozenConstants.shadowOpacity
             cellView.layer.shadowColor = UIColor.black.cgColor
-            cellView.layer.shadowOffset = CGSize(width: 0, height: 2)
-            cellView.layer.shadowRadius = 4
-            cellView.layer.shadowPath = UIBezierPath(roundedRect: cellView.frame, cornerRadius: cornerRadius).cgPath
-            cellView.layer.shadowOpacity = 0.7
+            cellView.layer.shadowPath = UIBezierPath(roundedRect: cellView.frame,
+                                                     cornerRadius: FrozenConstants.cornerRadius).cgPath
         }
         
     }
