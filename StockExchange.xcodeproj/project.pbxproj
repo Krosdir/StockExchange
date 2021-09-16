@@ -39,6 +39,8 @@
 		8338BFBE26F2427500D699EB /* CurrenciesViewController + Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338BFBD26F2427500D699EB /* CurrenciesViewController + Layout.swift */; };
 		83552E3B26ECF30600F16A48 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83552E3A26ECF30600F16A48 /* ActivityView.swift */; };
 		83964CD426EA498400724503 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83964CD326EA498400724503 /* NetworkService.swift */; };
+		8396577726F3958F00B4622F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396577526F3958F00B4622F /* ProfileViewController.swift */; };
+		8396577826F3958F00B4622F /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8396577626F3958F00B4622F /* ProfileViewController.xib */; };
 		839A3FE026ECA13600E46E75 /* Trade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A3FDF26ECA13600E46E75 /* Trade.swift */; };
 		839A3FE226ECA14E00E46E75 /* TradeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A3FE126ECA14E00E46E75 /* TradeData.swift */; };
 		839A3FE626ECA28A00E46E75 /* TradeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A3FE426ECA28A00E46E75 /* TradeTableViewCell.swift */; };
@@ -106,6 +108,8 @@
 		83552E3A26ECF30600F16A48 /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		8389120826E90710007B72D0 /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
 		83964CD326EA498400724503 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		8396577526F3958F00B4622F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8396577626F3958F00B4622F /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		839A3FDF26ECA13600E46E75 /* Trade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trade.swift; sourceTree = "<group>"; };
 		839A3FE126ECA14E00E46E75 /* TradeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeData.swift; sourceTree = "<group>"; };
 		839A3FE426ECA28A00E46E75 /* TradeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeTableViewCell.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 		8313357926E64D73004979B5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8396577426F3930700B4622F /* Profile */,
 				8320013326EE5367003C6B0E /* Currencies */,
 				8304AF7A26E65A0600D9DAD3 /* TradeHistory */,
 			);
@@ -300,6 +305,15 @@
 				8320013126EE5292003C6B0E /* CurrencyNetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8396577426F3930700B4622F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8396577626F3958F00B4622F /* ProfileViewController.xib */,
+				8396577526F3958F00B4622F /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		839A3FDD26ECA10200E46E75 /* Objects */ = {
@@ -445,6 +459,7 @@
 				8304AF7926E659FC00D9DAD3 /* TradeHistoryViewController.xib in Resources */,
 				839A3FE726ECA28A00E46E75 /* TradeTableViewCell.xib in Resources */,
 				8313357026E64BFF004979B5 /* LaunchScreen.storyboard in Resources */,
+				8396577826F3958F00B4622F /* ProfileViewController.xib in Resources */,
 				839A3FED26ECA3B900E46E75 /* Colors.xcassets in Resources */,
 				8313356D26E64BFF004979B5 /* Assets.xcassets in Resources */,
 				839A3FF426ECAE4200E46E75 /* TradeTableViewSectionHeader.xib in Resources */,
@@ -496,6 +511,7 @@
 				8338BFBC26F233E300D699EB /* CurrenciesLayoutConstants.swift in Sources */,
 				83964CD426EA498400724503 /* NetworkService.swift in Sources */,
 				8304AF7C26E65A2300D9DAD3 /* TradeHistoryViewModel.swift in Sources */,
+				8396577726F3958F00B4622F /* ProfileViewController.swift in Sources */,
 				83BD337826EFB356006B0EA0 /* HeaderCollectionReusableView.swift in Sources */,
 				839A3FEA26ECA2D100E46E75 /* Updateable.swift in Sources */,
 			);

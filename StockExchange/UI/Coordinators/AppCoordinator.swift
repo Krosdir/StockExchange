@@ -20,9 +20,11 @@ class AppCoordinator: Coordinator {
         currenciesCoordinator = CurrenciesCoordinator(root: UINavigationController(), parent: self)
         tradeHistoryCoordinator = TradeHistoryCoordinator(root: UINavigationController(), parent: self)
         
+        setupNavigationItems(to: tabBarController)
         tabBarController.tabBar.unselectedItemTintColor = .gray
         tabBarController.tabBar.tintColor = .black
         tabBarController.tabBar.barTintColor = .white
+        rootNavigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.paleGray]
         
         rootNavigationController.pushViewController(tabBarController, animated: false)
     }
@@ -47,5 +49,27 @@ class AppCoordinator: Coordinator {
     
     override func childDidFinish(_ child: Coordinator) {
         super.childDidFinish(child)
+    }
+}
+
+// MARK: - Private
+private extension AppCoordinator {
+    func setupNavigationItems(to viewController: UIViewController) {
+        let profileButton = UIBarButtonItem(
+            image: UIImage(systemName: "person.circle"),
+            style: .plain,
+            target: self,
+            action: #selector(showProfile)
+        )
+        profileButton.tintColor = .paleGray
+        
+
+        viewController.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.paleGray]
+        viewController.navigationItem.leftBarButtonItem = profileButton
+        viewController.navigationItem.title = Bundle.main.infoDictionary?["CFBundleName"] as? String
+    }
+    
+    @objc func showProfile() {
+        
     }
 }

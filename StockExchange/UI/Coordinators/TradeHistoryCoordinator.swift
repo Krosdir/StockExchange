@@ -20,8 +20,8 @@ class TradeHistoryCoordinator: Coordinator {
         rootNavigationController.isNavigationBarHidden = true
         rootNavigationController.tabBarItem = UITabBarItem(
             title: "Trade History".uppercased(),
-            image: UIImage(named: "Power Hour"),
-            selectedImage: UIImage(named: "Power Hour")
+            image: UIImage(systemName: "text.book.closed"),
+            selectedImage: UIImage(systemName: "text.book.closed.fill")
         )
     }
     
