@@ -20,8 +20,8 @@ class CurrenciesCoordinator: Coordinator {
         rootNavigationController.isNavigationBarHidden = true
         rootNavigationController.tabBarItem = UITabBarItem(
             title: "Currencies".uppercased(),
-            image: UIImage(named: "Power Hour"),
-            selectedImage: UIImage(named: "Power Hour")
+            image: UIImage(systemName: "coloncurrencysign.circle"),
+            selectedImage: UIImage(systemName: "coloncurrencysign.circle.fill")
         )
     }
     

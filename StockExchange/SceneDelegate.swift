@@ -28,8 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = appWindow
         
         UITabBar.appearance().barTintColor = .brighterDark
-        UITabBar.appearance().tintColor = .paleGray
-    }
+        UITabBar.appearance().tintColor = .paleGray    }
     
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
