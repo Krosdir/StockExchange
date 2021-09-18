@@ -46,9 +46,16 @@ class TradeTableViewSectionHeader: UITableViewHeaderFooterView, Reusable {
 
 // MARK: - Private
 private extension TradeTableViewSectionHeader {
+    enum TradeConstants {
+        static let borderWidth: CGFloat = 0.5
+    }
+    
     func setupViews() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
         sectionView.addGestureRecognizer(tapGesture)
+        
+        sectionView.layer.borderWidth = TradeConstants.borderWidth
+        sectionView.layer.borderColor = UIColor.dark.cgColor
     }
     
     @objc func didTap(_ gesture: UITapGestureRecognizer) {
