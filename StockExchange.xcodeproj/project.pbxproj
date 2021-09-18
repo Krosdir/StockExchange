@@ -57,6 +57,15 @@
 		83BD337426EFAE8C006B0EA0 /* DisabledCurrencyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BD337226EFAE8C006B0EA0 /* DisabledCurrencyCollectionViewCell.xib */; };
 		83BD337826EFB356006B0EA0 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BD337626EFB356006B0EA0 /* HeaderCollectionReusableView.swift */; };
 		83BD337926EFB356006B0EA0 /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BD337726EFB356006B0EA0 /* HeaderCollectionReusableView.xib */; };
+		83CBBD6526F5D87400353B40 /* PanelTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBD6426F5D87400353B40 /* PanelTransition.swift */; };
+		83CBBD6726F5D92B00353B40 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBD6626F5D92B00353B40 /* PresentationController.swift */; };
+		83CBBD6A26F5E24E00353B40 /* DimPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBD6926F5E24E00353B40 /* DimPresentationController.swift */; };
+		83CBBD6C26F5E63200353B40 /* PresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBD6B26F5E63200353B40 /* PresentAnimation.swift */; };
+		83CBBD6E26F5E91100353B40 /* DismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBD6D26F5E91100353B40 /* DismissAnimation.swift */; };
+		83CBBD7326F60CDB00353B40 /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBD7226F60CDB00353B40 /* TransitionDriver.swift */; };
+		83CBBD7526F6112B00353B40 /* UIPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBD7426F6112B00353B40 /* UIPanGestureRecognizer.swift */; };
+		83CBBD7726F611DE00353B40 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBD7626F611DE00353B40 /* CGPoint.swift */; };
+		83CBBD7926F6127500353B40 /* CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBBD7826F6127500353B40 /* CGFloat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -126,6 +135,15 @@
 		83BD337226EFAE8C006B0EA0 /* DisabledCurrencyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisabledCurrencyCollectionViewCell.xib; sourceTree = "<group>"; };
 		83BD337626EFB356006B0EA0 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		83BD337726EFB356006B0EA0 /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		83CBBD6426F5D87400353B40 /* PanelTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelTransition.swift; sourceTree = "<group>"; };
+		83CBBD6626F5D92B00353B40 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		83CBBD6926F5E24E00353B40 /* DimPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimPresentationController.swift; sourceTree = "<group>"; };
+		83CBBD6B26F5E63200353B40 /* PresentAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimation.swift; sourceTree = "<group>"; };
+		83CBBD6D26F5E91100353B40 /* DismissAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimation.swift; sourceTree = "<group>"; };
+		83CBBD7226F60CDB00353B40 /* TransitionDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDriver.swift; sourceTree = "<group>"; };
+		83CBBD7426F6112B00353B40 /* UIPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		83CBBD7626F611DE00353B40 /* CGPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		83CBBD7826F6127500353B40 /* CGFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				83552E3A26ECF30600F16A48 /* ActivityView.swift */,
+				83CBBD7126F60AD100353B40 /* Transition */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -398,6 +417,46 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		83CBBD6F26F60A8600353B40 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				83CBBD6B26F5E63200353B40 /* PresentAnimation.swift */,
+				83CBBD6D26F5E91100353B40 /* DismissAnimation.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		83CBBD7026F60AA000353B40 /* PresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				83CBBD6626F5D92B00353B40 /* PresentationController.swift */,
+				83CBBD6926F5E24E00353B40 /* DimPresentationController.swift */,
+			);
+			path = PresentationController;
+			sourceTree = "<group>";
+		};
+		83CBBD7126F60AD100353B40 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				83CBBD6426F5D87400353B40 /* PanelTransition.swift */,
+				83CBBD7226F60CDB00353B40 /* TransitionDriver.swift */,
+				83CBBD7026F60AA000353B40 /* PresentationController */,
+				83CBBD6F26F60A8600353B40 /* Animations */,
+				83CBBD7A26F6292E00353B40 /* Extensions */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		83CBBD7A26F6292E00353B40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83CBBD7426F6112B00353B40 /* UIPanGestureRecognizer.swift */,
+				83CBBD7626F611DE00353B40 /* CGPoint.swift */,
+				83CBBD7826F6127500353B40 /* CGFloat.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -479,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83CBBD6A26F5E24E00353B40 /* DimPresentationController.swift in Sources */,
 				839A3FE026ECA13600E46E75 /* Trade.swift in Sources */,
 				839A3FF226ECAE3500E46E75 /* TradeTableViewSectionHeader.swift in Sources */,
 				8320013B26EE5409003C6B0E /* CurrenciesViewModel.swift in Sources */,
@@ -497,9 +557,12 @@
 				839A3FF626ECAF4D00E46E75 /* UIView.swift in Sources */,
 				8313357E26E64E26004979B5 /* AppCoordinator.swift in Sources */,
 				8320012E26EE5243003C6B0E /* Currency.swift in Sources */,
+				83CBBD7726F611DE00353B40 /* CGPoint.swift in Sources */,
 				8304AF8426E65C0E00D9DAD3 /* InterfaceDelegate.swift in Sources */,
 				839A3FEF26ECA40300E46E75 /* UIColor.swift in Sources */,
+				83CBBD6E26F5E91100353B40 /* DismissAnimation.swift in Sources */,
 				83BD337326EFAE8C006B0EA0 /* DisabledCurrencyTableViewCell.swift in Sources */,
+				83CBBD7926F6127500353B40 /* CGFloat.swift in Sources */,
 				8320013926EE5399003C6B0E /* CurrenciesCoordinator.swift in Sources */,
 				839A3FF826ECB5C300E46E75 /* TradeHistoryNetworkService.swift in Sources */,
 				8313356426E64BFF004979B5 /* AppDelegate.swift in Sources */,
@@ -508,12 +571,17 @@
 				839A3FE226ECA14E00E46E75 /* TradeData.swift in Sources */,
 				83552E3B26ECF30600F16A48 /* ActivityView.swift in Sources */,
 				8313356626E64BFF004979B5 /* SceneDelegate.swift in Sources */,
+				83CBBD7526F6112B00353B40 /* UIPanGestureRecognizer.swift in Sources */,
 				8338BFBC26F233E300D699EB /* CurrenciesLayoutConstants.swift in Sources */,
+				83CBBD6726F5D92B00353B40 /* PresentationController.swift in Sources */,
 				83964CD426EA498400724503 /* NetworkService.swift in Sources */,
 				8304AF7C26E65A2300D9DAD3 /* TradeHistoryViewModel.swift in Sources */,
+				83CBBD7326F60CDB00353B40 /* TransitionDriver.swift in Sources */,
 				8396577726F3958F00B4622F /* ProfileViewController.swift in Sources */,
 				83BD337826EFB356006B0EA0 /* HeaderCollectionReusableView.swift in Sources */,
 				839A3FEA26ECA2D100E46E75 /* Updateable.swift in Sources */,
+				83CBBD6C26F5E63200353B40 /* PresentAnimation.swift in Sources */,
+				83CBBD6526F5D87400353B40 /* PanelTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

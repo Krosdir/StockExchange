@@ -14,11 +14,21 @@ class AppCoordinator: Coordinator {
     private(set) var tradeHistoryCoordinator: TradeHistoryCoordinator!
     private(set) var currenciesCoordinator: CurrenciesCoordinator!
     
+    private let profileViewController = ProfileViewController.fromNib()
+    private var fluidTransition: PanelTransition!
+    
     required init(root: UINavigationController, parent: Coordinator? = nil) {
         super.init(root: root, parent: parent)
         
         currenciesCoordinator = CurrenciesCoordinator(root: UINavigationController(), parent: self)
         tradeHistoryCoordinator = TradeHistoryCoordinator(root: UINavigationController(), parent: self)
+        
+        fluidTransition = PanelTransition(presented: profileViewController,
+                                          presenting: rootNavigationController,
+                                          presentationDirection: .fromLeft,
+                                          duration: 0.3)
+        profileViewController.transitioningDelegate = fluidTransition
+        profileViewController.modalPresentationStyle = .custom
         
         setupNavigationItems(to: tabBarController)
         tabBarController.tabBar.unselectedItemTintColor = .gray
@@ -70,6 +80,6 @@ private extension AppCoordinator {
     }
     
     @objc func showProfile() {
-        
+        rootNavigationController.present(profileViewController, animated: true)
     }
 }
