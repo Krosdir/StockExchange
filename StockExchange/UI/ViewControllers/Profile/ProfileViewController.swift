@@ -28,12 +28,14 @@ class ProfileViewController: UIViewController {
     }
 }
 
+// MARK: - ProfileViewModelInterfaceDelegate
 extension ProfileViewController: ProfileViewModelInterfaceDelegate {
     func updateInterface(_ sender: Any) {
         updateInterface()
     }
 }
 
+// MARK: - Private
 private extension ProfileViewController {
     func updateInterface() {
         DispatchQueue.main.async { [self] in

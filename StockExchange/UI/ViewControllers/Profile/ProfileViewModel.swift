@@ -34,7 +34,7 @@ class ProfileViewModel {
     
     func getBalance(for type: CurrencyType) -> Double {
         let index = CurrencyType.allCases.firstIndex(of: type) ?? 0
-        if index > CurrencyType.allCases.count {
+        if balances.isEmpty {
             return 0.0
         } else {
             return balances[index].balances.available
@@ -43,7 +43,7 @@ class ProfileViewModel {
     
     func getAddress(for type: CurrencyType) -> String {
         let index = CurrencyType.allCases.firstIndex(of: type) ?? 0
-        if index > CurrencyType.allCases.count {
+        if addresses.isEmpty {
             return "Empty"
         } else {
             return addresses[index].address

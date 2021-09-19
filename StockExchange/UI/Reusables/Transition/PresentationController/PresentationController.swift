@@ -43,7 +43,7 @@ class PresentationController: UIPresentationController {
             width = bounds.width / 1.25
             height = bounds.height
         case .fromRight:
-            xPoint = bounds.width / 4
+            xPoint = bounds.width - (bounds.width / 1.25)
             yPoint = 0
             width = bounds.width / 1.25
             height = bounds.height
