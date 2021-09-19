@@ -61,5 +61,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>APIKey</key>
+	<string>$(API_KEY)</string>
+	<key>APISecret</key>
+	<string>$(API_SECRET)</string>
 </dict>
 </plist>

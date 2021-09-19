@@ -22,11 +22,14 @@ class AppCoordinator: Coordinator {
         
         currenciesCoordinator = CurrenciesCoordinator(root: UINavigationController(), parent: self)
         tradeHistoryCoordinator = TradeHistoryCoordinator(root: UINavigationController(), parent: self)
-        
+        let viewModel = ProfileViewModel()
+        profileViewController.viewModel = viewModel
+        profileViewController.viewModel.interfaceDelegate = profileViewController
         fluidTransition = PanelTransition(presented: profileViewController,
                                           presenting: rootNavigationController,
                                           presentationDirection: .fromLeft,
                                           duration: 0.3)
+        
         profileViewController.transitioningDelegate = fluidTransition
         profileViewController.modalPresentationStyle = .custom
         

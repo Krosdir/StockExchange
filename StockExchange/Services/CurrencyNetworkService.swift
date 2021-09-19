@@ -13,7 +13,7 @@ final class CurrencyNetworkService: NetworkService {
     
     func getCurrencies(completion: @escaping (Result<[Currency], SEError>) -> Void) {
         let url = URL(string: "?command=returnCurrencies",
-                      relativeTo: TradeHistoryNetworkService.basePublicURL)!
+                      relativeTo: CurrencyNetworkService.basePublicURL)!
         
         let request = session.request(url,
                                       method: .get)
