@@ -12,6 +12,10 @@ class NetworkService {
     static let basePublicLink = "https://poloniex.com/public"
     static let basePrivateLink = "https://poloniex.com/tradingApi"
     static var basePublicURL: URL { URL(string: "\(basePublicLink)")! }
+    static var basePrivateURL: URL { URL(string: "\(basePrivateLink)")! }
+    
+    static let apiKey = Bundle.main.object(forInfoDictionaryKey: "APIKey") as! String
+    static let apiSecret = Bundle.main.object(forInfoDictionaryKey: "APISecret") as! String
     
     static let dateFormatter = ISO8601DateFormatter()
     

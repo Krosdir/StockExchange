@@ -37,6 +37,12 @@
 		8338BFBA26F22ABF00D699EB /* FrozenCurrencyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8338BFB826F22ABF00D699EB /* FrozenCurrencyCollectionViewCell.xib */; };
 		8338BFBC26F233E300D699EB /* CurrenciesLayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338BFBB26F233E300D699EB /* CurrenciesLayoutConstants.swift */; };
 		8338BFBE26F2427500D699EB /* CurrenciesViewController + Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338BFBD26F2427500D699EB /* CurrenciesViewController + Layout.swift */; };
+		8343D6E226F7334D00E396C4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8343D6E126F7334D00E396C4 /* Date.swift */; };
+		8343D6E426F7337800E396C4 /* ProfileNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8343D6E326F7337800E396C4 /* ProfileNetworkService.swift */; };
+		8343D6E726F7547500E396C4 /* CompleteBalances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8343D6E626F7547500E396C4 /* CompleteBalances.swift */; };
+		8343D6E926F7548900E396C4 /* CompleteBalancesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8343D6E826F7548900E396C4 /* CompleteBalancesData.swift */; };
+		8343D6EB26F7551500E396C4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8343D6EA26F7551500E396C4 /* ProfileViewModel.swift */; };
+		8343D6ED26F7688C00E396C4 /* DepositAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8343D6EC26F7688C00E396C4 /* DepositAddress.swift */; };
 		83552E3B26ECF30600F16A48 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83552E3A26ECF30600F16A48 /* ActivityView.swift */; };
 		83964CD426EA498400724503 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83964CD326EA498400724503 /* NetworkService.swift */; };
 		8396577726F3958F00B4622F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8396577526F3958F00B4622F /* ProfileViewController.swift */; };
@@ -114,6 +120,14 @@
 		8338BFB826F22ABF00D699EB /* FrozenCurrencyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrozenCurrencyCollectionViewCell.xib; sourceTree = "<group>"; };
 		8338BFBB26F233E300D699EB /* CurrenciesLayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesLayoutConstants.swift; sourceTree = "<group>"; };
 		8338BFBD26F2427500D699EB /* CurrenciesViewController + Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrenciesViewController + Layout.swift"; sourceTree = "<group>"; };
+		8343D6E026F7323700E396C4 /* StockExchangeBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StockExchangeBridgingHeader.h; sourceTree = "<group>"; };
+		8343D6E126F7334D00E396C4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		8343D6E326F7337800E396C4 /* ProfileNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNetworkService.swift; sourceTree = "<group>"; };
+		8343D6E526F750C300E396C4 /* PersonalData.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PersonalData.xcconfig; sourceTree = "<group>"; };
+		8343D6E626F7547500E396C4 /* CompleteBalances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteBalances.swift; sourceTree = "<group>"; };
+		8343D6E826F7548900E396C4 /* CompleteBalancesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteBalancesData.swift; sourceTree = "<group>"; };
+		8343D6EA26F7551500E396C4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		8343D6EC26F7688C00E396C4 /* DepositAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositAddress.swift; sourceTree = "<group>"; };
 		83552E3A26ECF30600F16A48 /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		8389120826E90710007B72D0 /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
 		83964CD326EA498400724503 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -177,6 +191,7 @@
 				8304AF8926E65CD000D9DAD3 /* String.swift */,
 				839A3FEE26ECA40300E46E75 /* UIColor.swift */,
 				839A3FF526ECAF4D00E46E75 /* UIView.swift */,
+				8343D6E126F7334D00E396C4 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,6 +256,8 @@
 				839A3FEC26ECA3B900E46E75 /* Colors.xcassets */,
 				8313356E26E64BFF004979B5 /* LaunchScreen.storyboard */,
 				8313357126E64BFF004979B5 /* Info.plist */,
+				8343D6E026F7323700E396C4 /* StockExchangeBridgingHeader.h */,
+				8343D6E526F750C300E396C4 /* PersonalData.xcconfig */,
 			);
 			path = StockExchange;
 			sourceTree = "<group>";
@@ -322,6 +339,7 @@
 				83964CD326EA498400724503 /* NetworkService.swift */,
 				839A3FF726ECB5C300E46E75 /* TradeHistoryNetworkService.swift */,
 				8320013126EE5292003C6B0E /* CurrencyNetworkService.swift */,
+				8343D6E326F7337800E396C4 /* ProfileNetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -331,6 +349,7 @@
 			children = (
 				8396577626F3958F00B4622F /* ProfileViewController.xib */,
 				8396577526F3958F00B4622F /* ProfileViewController.swift */,
+				8343D6EA26F7551500E396C4 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -340,6 +359,8 @@
 			children = (
 				839A3FDF26ECA13600E46E75 /* Trade.swift */,
 				8320012D26EE5243003C6B0E /* Currency.swift */,
+				8343D6E626F7547500E396C4 /* CompleteBalances.swift */,
+				8343D6EC26F7688C00E396C4 /* DepositAddress.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -349,6 +370,7 @@
 			children = (
 				839A3FE126ECA14E00E46E75 /* TradeData.swift */,
 				8320012F26EE5261003C6B0E /* CurrencyData.swift */,
+				8343D6E826F7548900E396C4 /* CompleteBalancesData.swift */,
 			);
 			path = NetworkObjects;
 			sourceTree = "<group>";
@@ -545,6 +567,7 @@
 				8338BFBE26F2427500D699EB /* CurrenciesViewController + Layout.swift in Sources */,
 				839A3FE626ECA28A00E46E75 /* TradeTableViewCell.swift in Sources */,
 				8304AF8826E65C9000D9DAD3 /* SEError.swift in Sources */,
+				8343D6ED26F7688C00E396C4 /* DepositAddress.swift in Sources */,
 				8304AF7826E659FC00D9DAD3 /* TradeHistoryViewController.swift in Sources */,
 				8320013226EE5292003C6B0E /* CurrencyNetworkService.swift in Sources */,
 				8338BFB926F22ABF00D699EB /* FrozenCurrencyCollectionViewCell.swift in Sources */,
@@ -554,6 +577,7 @@
 				8320013026EE5261003C6B0E /* CurrencyData.swift in Sources */,
 				8304AF8A26E65CD000D9DAD3 /* String.swift in Sources */,
 				8320013626EE5383003C6B0E /* CurrenciesViewController.swift in Sources */,
+				8343D6E226F7334D00E396C4 /* Date.swift in Sources */,
 				839A3FF626ECAF4D00E46E75 /* UIView.swift in Sources */,
 				8313357E26E64E26004979B5 /* AppCoordinator.swift in Sources */,
 				8320012E26EE5243003C6B0E /* Currency.swift in Sources */,
@@ -565,10 +589,12 @@
 				83CBBD7926F6127500353B40 /* CGFloat.swift in Sources */,
 				8320013926EE5399003C6B0E /* CurrenciesCoordinator.swift in Sources */,
 				839A3FF826ECB5C300E46E75 /* TradeHistoryNetworkService.swift in Sources */,
+				8343D6E426F7337800E396C4 /* ProfileNetworkService.swift in Sources */,
 				8313356426E64BFF004979B5 /* AppDelegate.swift in Sources */,
 				832B5D6126F0E58F00CE737D /* DelistedCurrencyCollectionViewCell.swift in Sources */,
 				839A3FEB26ECA2D100E46E75 /* Reusable.swift in Sources */,
 				839A3FE226ECA14E00E46E75 /* TradeData.swift in Sources */,
+				8343D6E926F7548900E396C4 /* CompleteBalancesData.swift in Sources */,
 				83552E3B26ECF30600F16A48 /* ActivityView.swift in Sources */,
 				8313356626E64BFF004979B5 /* SceneDelegate.swift in Sources */,
 				83CBBD7526F6112B00353B40 /* UIPanGestureRecognizer.swift in Sources */,
@@ -576,6 +602,8 @@
 				83CBBD6726F5D92B00353B40 /* PresentationController.swift in Sources */,
 				83964CD426EA498400724503 /* NetworkService.swift in Sources */,
 				8304AF7C26E65A2300D9DAD3 /* TradeHistoryViewModel.swift in Sources */,
+				8343D6EB26F7551500E396C4 /* ProfileViewModel.swift in Sources */,
+				8343D6E726F7547500E396C4 /* CompleteBalances.swift in Sources */,
 				83CBBD7326F60CDB00353B40 /* TransitionDriver.swift in Sources */,
 				8396577726F3958F00B4622F /* ProfileViewController.swift in Sources */,
 				83BD337826EFB356006B0EA0 /* HeaderCollectionReusableView.swift in Sources */,
@@ -609,6 +637,7 @@
 /* Begin XCBuildConfiguration section */
 		8313357226E64BFF004979B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8343D6E526F750C300E396C4 /* PersonalData.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -670,6 +699,7 @@
 		};
 		8313357326E64BFF004979B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8343D6E526F750C300E396C4 /* PersonalData.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -740,6 +770,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Krosdir.StockExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = StockExchange/StockExchangeBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -762,6 +793,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Krosdir.StockExchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = StockExchange/StockExchangeBridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

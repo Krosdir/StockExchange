@@ -94,3 +94,19 @@ enum CurrencyErrorKey: String, SEErrorKey {
 extension SEError {
     static let getCurrenciesFailed = SEError(CurrencyErrorKey.getCurrenciesFailed)
 }
+
+enum CompleteBalancesErrorKey: String, SEErrorKey {
+    case getCompleteBalancesFailed = "error.network.complete.balances.get.failed"
+}
+
+extension SEError {
+    static let getCompleteBalancesFailed = SEError(CompleteBalancesErrorKey.getCompleteBalancesFailed)
+}
+
+enum DepositAddressesErrorKey: String, SEErrorKey {
+    case getDepositAddressesFailed = "error.network.deposit.addresses.get.failed"
+}
+
+extension SEError {
+    static let getDepositAddressesFailed = SEError(DepositAddressesErrorKey.getDepositAddressesFailed)
+}
