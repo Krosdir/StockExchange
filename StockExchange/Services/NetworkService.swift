@@ -17,8 +17,6 @@ class NetworkService {
     static let apiKey = Bundle.main.object(forInfoDictionaryKey: "APIKey") as! String
     static let apiSecret = Bundle.main.object(forInfoDictionaryKey: "APISecret") as! String
     
-    static let dateFormatter = ISO8601DateFormatter()
-    
     private(set) lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
