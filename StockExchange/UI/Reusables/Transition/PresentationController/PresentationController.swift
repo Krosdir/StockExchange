@@ -21,36 +21,31 @@ class PresentationController: UIPresentationController {
     
     override var frameOfPresentedViewInContainerView: CGRect {
         guard let bounds = containerView?.bounds else { return .zero }
-        var xPoint: CGFloat = 0
-        var yPoint: CGFloat = 0
+        var point: CGPoint = .zero
         var width = bounds.width
         var height = bounds.height
         
         switch presentationDirection {
         case .fromBottom:
-            xPoint = 0
-            yPoint = bounds.height / 2
+            point = CGPoint(x: 0, y: bounds.height / 2)
             width = bounds.width
             height = bounds.height / 2
         case .fromTop:
-            xPoint = 0
-            yPoint = 0
+            point = CGPoint(x: 0, y: 0)
             width = bounds.width
             height = bounds.height / 2
         case .fromLeft:
-            xPoint = 0
-            yPoint = 0
+            point = CGPoint(x: 0, y: 0)
             width = bounds.width / 1.25
             height = bounds.height
         case .fromRight:
-            xPoint = bounds.width - (bounds.width / 1.25)
-            yPoint = 0
+            point = CGPoint(x: bounds.width - (bounds.width / 1.25), y: 0)
             width = bounds.width / 1.25
             height = bounds.height
         }
         
-        return CGRect(x: xPoint,
-                      y: yPoint,
+        return CGRect(x: point.x,
+                      y: point.y,
                       width: width,
                       height: height)
     }
